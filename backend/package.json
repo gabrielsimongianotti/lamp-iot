@@ -1,0 +1,24 @@
+{
+  "name": "backendIot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "nodemon": "^2.0.12",
+    "typescript": "^4.3.5"
+  },
+  "scripts": {
+    "start": "npm run serve",
+    "dev": "concurrently \"npm run build:watch\" \"npm run serve:watch\"",
+    "serve": "node dist/server",
+    "serve:watch": "nodemon dist/server",
+    "build": "tsc",
+    "build:watch": "tsc -w"
+  },
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
